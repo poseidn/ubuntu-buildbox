@@ -6,14 +6,6 @@ RUN apt-get update -qq && apt-get install -y \
     libsdl2-image-dev libsdl2-dev \ 
     wget default-jre unzip
 
-# Installs i386 architecture required for running 32 bit Android tools
-RUN dpkg --add-architecture i386 && \
-    apt-get update -y && \
-    apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 && \
-    rm -rf /var/lib/apt/lists/* && \
-    apt-get autoremove -y && \
-    apt-get clean
-
 # Installs Android SDK
 ENV ANDROID_SDK_FILENAME android-sdk_r23.0.2-linux.tgz
 ENV ANDROID_SDK_URL http://dl.google.com/android/${ANDROID_SDK_FILENAME}
