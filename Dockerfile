@@ -7,7 +7,7 @@ RUN apt-get update -qq && apt-get install -y \
     wget default-jre unzip
 
 # Installs Android SDK
-ENV ANDROID_SDK_FILENAME android-sdk_r23.0.2-linux.tgz
+ENV ANDROID_SDK_FILENAME android-sdk_r24.4.1-linux.tgz
 ENV ANDROID_SDK_URL http://dl.google.com/android/${ANDROID_SDK_FILENAME}
 ENV ANDROID_API_LEVELS android-18,android-19,android-20,android-21,android-22,android-23,android-24
 ENV ANDROID_BUILD_TOOLS_VERSION 24.0.2
