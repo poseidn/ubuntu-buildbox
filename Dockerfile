@@ -6,7 +6,8 @@ RUN apt-get install -y \
     build-essential iwyu cmake g++ \
     libglm-dev libglew-dev libboost-all-dev freeglut3-dev \
     libsdl2-image-dev libsdl2-dev \ 
-    wget default-jre unzip
+    wget default-jre unzip \
+    doxygen graphviz
 
 # Installs Android SDK
 ENV ANDROID_SDK_FILENAME android-sdk_r24.4.1-linux.tgz
